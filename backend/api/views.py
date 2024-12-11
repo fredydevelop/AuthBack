@@ -129,7 +129,7 @@ def verify(request):
             #image_rgb = cv2.cvtColor(image_array,cv2.COLOR_BGR2RGB)
             
 
-            model_path = r'C:\Users\THINKPAD T460s\Documents\Web base facial authentication\backend\siamese_model.h5'
+            model_path = '/backend/siamese_model.h5'
             model=tf.keras.models.load_model(model_path, custom_objects={'L1Dist':L1Dist})
             #is_match= verify_faces(img,image_rgb)
             is_match=verify_func(model,old_picture,image_array,0.8)
